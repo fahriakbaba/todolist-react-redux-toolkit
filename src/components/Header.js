@@ -1,6 +1,11 @@
 function Header() {
     return(
-        <h5>Header component</h5>
+        <h2
+         className="fs-2 fw-bold"
+          style={{opacity:".9", letterSpacing:"1px", fontFamily:"Verdena"}}
+        >
+            TODOLİST
+        </h2>
     )
 }
 
