@@ -2,18 +2,11 @@ import { createSlice } from '@reduxjs/toolkit'
 
 
 const initialState = {
-  items: [
-    { id: 1, title: "salad", isCompleted: true },
-    { id: 2, title: "meat", isCompleted: false },
-    { id: 3, title: "bananas", isCompleted: true },
-    { id: 4, title: "kebap", isCompleted: true },
-    { id: 5, title: "do homework", isCompleted: false },
-    { id: 6, title: "make a cake", isCompleted: true },
-  ]
+  items: JSON.parse(localStorage.getItem("items")) || [],
 }
 
 export const todoSlice = createSlice({
-  name: 'counter',
+  name: 'todo',
   initialState,
   reducers: {
     addItemTodos: (state, action) => {
@@ -27,8 +20,12 @@ export const todoSlice = createSlice({
     removeItemTodos: (state, action) => {
       state.items = state.items.filter(item => item.id !== action.payload.id );
     },
+    toggleItemTodos: (state, action) => {
+      const findItem = state.items.find(item => item.id === action.payload.id );
+      findItem.isCompleted = action.payload.isCompleted;
+    }
   },
 })
 
-export const { addItemTodos, removeItemTodos } = todoSlice.actions
+export const { addItemTodos, removeItemTodos, toggleItemTodos } = todoSlice.actions
 export default todoSlice.reducer

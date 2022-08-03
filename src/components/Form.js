@@ -8,11 +8,11 @@ function Form () {
     const dispatch = useDispatch();
 
     const addItem = (e) => {
+        e.preventDefault();
         if(name.trim() === "" ) {
             alert("Please, enter your duty...");
             return;
         }
-        e.preventDefault();
         dispatch(addItemTodos({title:name}));
         setName("");
     }
