@@ -1,6 +1,11 @@
 # Getting Started with Create React App
 
+![Image](./public/images/todolist.png)
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+* redux-toolkit
+* bootstrap 
+* react-icons is used.
 
 ## Available Scripts
 
