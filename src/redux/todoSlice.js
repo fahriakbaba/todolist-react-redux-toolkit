@@ -16,11 +16,18 @@ export const todoSlice = createSlice({
   name: 'counter',
   initialState,
   reducers: {
-
-  }
+    addItemTodos: (state, action) => {
+      const newItem = {
+        id: Date.now().toString(),
+        title: action.payload.title,
+        isCompleted: false
+      }
+      state.items.push(newItem);
+    }
+    },
 })
 
-//export const { } = todoSlice.actions
+export const { addItemTodos } = todoSlice.actions
 
 export default todoSlice.reducer
 // export const {} = todoSlice.actions;
