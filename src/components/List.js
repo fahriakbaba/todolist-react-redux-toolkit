@@ -22,12 +22,3 @@ function List() {
 }
 
 export default List;
-
-
-
-
-    //   <ul className='list-group col-3 mx-auto'>
-    //     <li className='list-group-item list-group-item-action'>hi</li>
-    //     <li className='list-group-item list-group-item-action'>hi</li>
-    //     <li className='list-group-item list-group-item-action'>hi</li>
-    //   </ul>
