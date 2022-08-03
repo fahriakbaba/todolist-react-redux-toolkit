@@ -1,19 +1,17 @@
 import React from "react";
-import ListItem from "../ListItem";
+import { useSelector } from "react-redux";
+import ListItem from "./ListItem";
+
 
 function List() {
-    const [data, setData] = React.useState([
-        {title: "salad", isCompleted: true, id: 1},
-        {title: "meat", isCompleted: false, id: 2},
-        {title: "bananas", isCompleted: true, id: 3},
-    ])
-
+    const {items} = useSelector(store => store.todo);
+    console.log(items);
 
 
     return(
         <ul className='list-group col-sm-4 mx-auto'>
             {
-                data.map(item => {
+                items.map(item => {
                     return(
                         <ListItem item={item} key={item.id} />
                     )

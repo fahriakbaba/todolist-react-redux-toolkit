@@ -8,6 +8,7 @@
 
 .toggle {
   text-decoration: line-through;
+  opacity: .7;
 }
 
 .react-icon {
