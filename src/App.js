@@ -3,6 +3,7 @@ import './App.css';
 import Form from "./components/Form";
 import Header from "./components/Header";
 import List from "./components/List";
+import Footer from './components/Footer';
 import { useSelector } from "react-redux";
  
 
@@ -18,7 +19,7 @@ function App() {
       <Header />
       <Form />
       <List />  
-      {/* <Footer />     */}
+      <Footer />    
     </div>
   );
 }
